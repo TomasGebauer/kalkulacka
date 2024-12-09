@@ -1,16 +1,16 @@
-// Přiřazení tlačítek a seznamu
-const pridatZnamkuBtn = document.getElementById('pridatZnamku');
-const spocitatPrumerBtn = document.getElementById('spocitatPrumer');
-const vymazatZnamkyBtn = document.getElementById('vymazatZnamky');
+
+const pridatZnamku = document.getElementById('pridatZnamku');
+const spocitatPrumer = document.getElementById('spocitatPrumer');
+const vymazatZnamky = document.getElementById('vymazatZnamky');
 const seznamZnamek = document.getElementById('seznamZnamek');
 const vysledek = document.getElementById('vysledek');
 
-// Seznam pro známky a váhy
+
 let znamky = [];
 let vahy = [];
 
-// Funkce pro přidání známky do seznamu
-pridatZnamkuBtn.addEventListener('click', function() {
+
+pridatZnamku.addEventListener('click', function() {
     const znamka = document.getElementById('znamka').value;
     const vaha = document.getElementById('vaha').value;
 
@@ -27,8 +27,7 @@ pridatZnamkuBtn.addEventListener('click', function() {
     }
 });
 
-// Funkce pro výpočet průměru
-spocitatPrumerBtn.addEventListener('click', function() {
+spocitatPrumer.addEventListener('click', function() {
     if (znamky.length === 0 || vahy.length === 0) {
         vysledek.textContent = 'Prosím, přidejte nějaké známky.';
         return;
